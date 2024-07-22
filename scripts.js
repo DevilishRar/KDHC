@@ -29,3 +29,14 @@ document.getElementById('dropdownButton').addEventListener('click', function() {
         dropdownMenu.classList.add('open');
     }
 });
+
+window.addEventListener('load', centerContent);
+window.addEventListener('resize', centerContent);
+
+function centerContent() {
+    const main = document.querySelector('main');
+    const headerHeight = document.querySelector('header').offsetHeight;
+    const availableHeight = window.innerHeight - headerHeight;
+
+    main.style.minHeight = `${availableHeight}px`;
+}

@@ -1,4 +1,4 @@
-# Rio Site
+# KDHC Site
 
 The MIT License (MIT)
 

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by DevilishRar</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Kristsoffe's DHC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="text-white">
+    <div class="background-decor">
+        <div class="circle" style="width: 200px; height: 200px; top: 5%; left: 5%;"></div>
+        <div class="circle" style="width: 200px; height: 200px; top: 5%; right: 5%;"></div>
+        <div class="circle" style="width: 200px; height: 200px; bottom: 5%; left: 5%;"></div>
+        <div class="circle" style="width: 200px; height: 200px; bottom: 5%; right: 5%;"></div>
+        <div class="circle" style="width: 200px; height: 200px; top: 10%; left: 5%;"></div>
+        <div class="circle" style="width: 300px; height: 300px; top: 10%; right: 5%;"></div>
+        <div class="circle" style="width: 150px; height: 150px; top: 30%; left: 15%;"></div>
+        <div class="circle" style="width: 150px; height: 150px; top: 30%; right: 15%;"></div>
+        <div class="circle" style="width: 200px; height: 200px; top: 50%; left: 10%;"></div>
+        <div class="circle" style="width: 200px; height: 200px; top: 50%; right: 10%;"></div>
+        <div class="circle" style="width: 100px; height: 100px; top: 70%; left: 20%;"></div>
+        <div class="circle" style="width: 100px; height: 100px; top: 70%; right: 20%;"></div>
+        <div class="circle" style="width: 250px; height: 250px; top: 40%; left: 40%;"></div>
+        <div class="circle" style="width: 150px; height: 150px; top: 60%; left: 60%;"></div>
+        <div class="circle" style="width: 200px; height: 200px; top: 80%; left: 50%;"></div>
+        <div class="circle" style="width: 100px; height: 100px; top: 30%; left: 30%;"></div>
+        <div class="circle" style="width: 100px; height: 100px; top: 40%; right: 40%;"></div>
+        <div class="circle" style="width: 150px; height: 150px; top: 60%; right: 30%;"></div>
+        <div class="circle" style="width: 200px; height: 200px; top: 70%; left: 70%;"></div>
+    </div>
+    <header class="flex justify-between items-center p-6">
+        <div class="text-2xl font-bold custom-text">Kristsoffe's DHC</div>
+        <nav class="hidden md:flex space-x-6">
+            <a href="index.html" class="navbar-item">Home</a>
+            <a href="AboutUs.html" class="navbar-item">About us</a>
+            <a href="https://discord.gg/3PEy47u5" class="navbar-item">Contact</a>
+        </nav>
+        <div class="md:hidden">
+            <i class="fas fa-bars text-2xl"></i>
+        </div>
+    </header>
+    <main class="flex flex-col items-center justify-center text-center px-6 py-12">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 custom-text">About Kristsoffe's DHC</h1>
+        <div class="flex justify-center flex-wrap">
+            <div class="card" id="aboutCard1">
+                <div class="card-content">
+                    <h3 class="text-xl font-bold">What is Kristsoffe's DHC?</h3>
+                    <p class="text-sm">
+                        Kristsoffe's DHC is your number one source for purchasing Da Hood cash. We are dedicated to providing you with the very best service, focusing on speed, reliability, and excellent customer support.
+                    </p>
+                </div>
+            </div>
+            <div class="card" id="aboutCard2">
+                <div class="card-content">
+                    <h3 class="text-xl font-bold">Our Journey</h3>
+                    <p class="text-sm">
+                        Our journey began with a simple idea: to help gamers get the resources they need to enjoy their favorite games without the hassle. We work with trusted sellers who ensure that every transaction is secure and fast.
+                    </p>
+                </div>
+            </div>
+            <div class="card" id="aboutCard3">
+                <div class="card-content">
+                    <h3 class="text-xl font-bold">Our Mission</h3>
+                    <p class="text-sm">
+                        At Kristsoffe's DHC, we understand how important it is to get your in-game currency quickly and safely. That's why we strive to make the process as smooth as possible. Join our community and take advantage of our unbeatable service.
+                    </p>
+                </div>
+            </div>
+            <div class="card" id="aboutCard4">
+                <div class="card-content">
+                    <h3 class="text-xl font-bold">Need Help?</h3>
+                    <p class="text-sm">
+                        If you have any questions or need assistance, feel free to reach out to us on our Discord server. We are always here to help!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+	window.addEventListener('load', centerContent);
+	window.addEventListener('resize', centerContent);
+
+	function centerContent() {
+		const main = document.querySelector('main');
+		const headerHeight = document.querySelector('header').offsetHeight;
+		const availableHeight = window.innerHeight - headerHeight;
+
+		main.style.minHeight = `${availableHeight}px`;
+	}
+	</script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

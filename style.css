@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212;
+    background-size: cover;
+    background-position: center;
+    color: #FFD700;
+    overflow-x: hidden;
+    position: relative;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(105, 105, 105, 0.7);
+    border-radius: 10px;
+}
+.background-decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    background: repeating-linear-gradient(
+        45deg,
+        #121212 0,
+        #121212 25%,
+        #1f1f1f 0,
+        #1f1f1f 50%
+    );
+    background-size: 50px 50px;
+}
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.circle:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+}
+.custom-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeInDown 2s ease-in-out 0.4s both;
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.custom-button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s, color 0.2s;
+    font-family: 'Montserrat', sans-serif;
+    animation: fadeInDown 2s ease-in-out 0.8s both;
+}
+.custom-button:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+    background-color: #e0e0e0;
+    color: #121212;
+}
+.card {
+    background-color: #1f1f1f;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    max-width: 300px;
+    margin: 10px;
+    color: #ffffff;
+    animation: fadeInDown 2s ease-in-out 1.2s both;
+    flex: 1;
+}
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card-content {
+    padding: 20px;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+.modal img {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+.modal:target {
+    display: block;
+}
+.navbar-item {
+    transition: color 0.3s;
+    animation: fadeInDown 2s ease-in-out 0s both;
+}
+.navbar-item:hover {
+    color: #FFD700;
+}
+.dropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    background-color: #1f1f1f;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 10;
+    animation: fadeInDown 0.5s ease-in-out both;
+}
+.dropdown-item {
+    padding: 10px 20px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.dropdown-item:hover {
+    background-color: #333333;
+}
+.custom-button:focus + .dropdown,
+.dropdown:hover {
+    display: flex;
+}
+.purchase-methods {
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1f1f1f;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 10;
+    width: 170%;
+    max-width: 600px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.purchase-methods.open {
+    display: flex;
+    opacity: 1;
+    transform: translateX(-50%) translateY(10px);
+}
+.purchase-methods.close {
+    display: flex;
+    opacity: 0;
+    transform: translateX(-50%) translateY(0);
+}
+.purchase-method {
+    background-color: #2e2e2e;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    flex: 1;
+    transition: transform 0.2s, background-color 0.2s;
+}
+.purchase-method:hover {
+    transform: scale(1.05);
+    background-color: #3e3e3e;
+}
+.purchase-button:focus + .purchase-methods,
+.purchase-methods:hover {
+    display: flex;
+}
+#dropdownButton.open + #dropdownMenu {
+    display: flex;
+    animation: fadeInDown 0.5s ease-in-out both;
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeOutUp {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-20px); }
+}
